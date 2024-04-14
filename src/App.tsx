@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 const ProgressBar = () => {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState<any>(0);
   const [daysPassed, setDaysPassed] = useState(0);
   const [monthsPassed, setMonthsPassed] = useState(0);
   const [hoursPassed, setHoursPassed] = useState(0);
@@ -10,8 +10,8 @@ const ProgressBar = () => {
 
   useEffect(() => {
     const updateProgress = () => {
-      const currentDate = new Date();
-      const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
+      const currentDate: any = new Date();
+      const startOfYear: any = new Date(currentDate.getFullYear(), 0, 0);
       const totalMillisecondsInYear = currentDate - startOfYear;
       const totalSecondsInYear = totalMillisecondsInYear / 1000;
 
